@@ -16,7 +16,7 @@ const cityValue = await citySelect.locator('option').evaluateAll(
         option.textContent?.replace(/\u00A0/g, ' ').trim() === 'New York'
     );
 
-    return city?.value;
+    return city instanceof HTMLOptionElement ? city.value : undefined;
   }
 );
 

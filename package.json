@@ -1,15 +1,26 @@
 {
-  "name": "certsign",
+  "name": "playwright-typescript-automation",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {},
-  "keywords": [],
-  "author": "",
+  "description": "Playwright TypeScript automation tests for Sauce Demo and UI Testing Playground",
+  "private": true,
+  "scripts": {
+    "test": "playwright test",
+    "test:chromium": "playwright test --project=chromium",
+    "test:saucedemo": "playwright test tests/saucedemo",
+    "test:uitesting": "playwright test tests/uitesting",
+    "report": "playwright show-report"
+  },
+  "keywords": [
+    "playwright",
+    "typescript",
+    "automation-testing",
+    "qa"
+  ],
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
     "@playwright/test": "1.57.0",
-    "@types/node": "^26.6.4"
+    "@types/node": "^26.6.4",
+    "typescript": "^5.9.3"
   }
 }

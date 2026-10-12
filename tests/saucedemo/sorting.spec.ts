@@ -1,9 +1,6 @@
-import { test, expect } from '@playwright/test';
-import { InventoryPage } from '../../pages/saucedemo/inventory.page';
+import { test, expect } from '../../fixtures/test-fixtures';
 
-test('produsele se sortează corect după preț', async ({ page }) => {
-  const inventoryPage = new InventoryPage(page);
-
+test('produsele se sortează corect după preț', async ({ page, inventoryPage }) => {
   // Deschidem aplicația și ne autentificăm
   await inventoryPage.open();
   await inventoryPage.login();
